@@ -2,7 +2,7 @@ Each STL needs to be printed twice.
 
 Recommend to print with PETG material and use a high infill above 50%.
 
-The beams will/should connect to the stand via an interefence fit.
+The beams are secured via an interefence fit.
 
 - 2 x MD Stand
 - 2 x Beams Long
