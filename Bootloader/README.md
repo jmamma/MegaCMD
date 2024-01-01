@@ -28,7 +28,7 @@ please source them locally via ebay/aliexpress or an electronics store.
 
   2) Connect the cable to the 6 pin header closest to the Atmega2560 microcontroller. (See reference image below for correct cable placement and orientation)
 
-  4) Connect the USB programmer to your computer. The LEDs should light up, and if the MegaCMD is still operational it will power on.
+  4) Connect the USB programmer to your computer. The programmer's LEDs should light up, and if the MegaCMD is still operational it will power on.
 
   5) Run the avdude command below to flash the bootloader, ensure the optiboot_atmega2560.hex file is in your current working directory.
 
