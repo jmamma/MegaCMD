@@ -2,6 +2,8 @@
 
 It was discovered that in rare circumstances the MegaCMD could corrupt its own bootloader, if operating under low power.
 
+# These instructions do not apply to the DIY MegaCommand.
+
 ## Symptoms:
 
 1) MegaCMD suddenly does not boot.
