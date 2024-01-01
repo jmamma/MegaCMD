@@ -31,7 +31,7 @@ please source them locally via ebay/aliexpress or an electronics store.
 
   5) Run the avdude command below to flash the bootloader, ensure the optiboot_atmega2560.hex file is in your current working directory.
 
-     avrdude -c usbasp -p m2560 -U flash:w:optiboot_atmega2560.hex -U lfuse:w:0xFF:m -U hfuse:w:0xDE:m -U efuse:w:0xFF:m -U lock:w:0x0F:m -B10
+     ```avrdude -c usbasp -p m2560 -U flash:w:optiboot_atmega2560.hex -U lfuse:w:0xFF:m -U hfuse:w:0xDE:m -U efuse:w:0xFF:m -U lock:w:0x0F:m -B10```
 
      (See sample output below).
 
@@ -53,6 +53,7 @@ please source them locally via ebay/aliexpress or an electronics store.
 
 ### Sample Output
 
+```
 avrdude -c usbasp -p m2560 -U flash:w:optiboot_atmega2560.hex -U lfuse:w:0xFF:m -U hfuse:w:0xDE:m -U efuse:w:0xFF:m -U lock:w:0x0F:m 
 
 avrdude: AVR device initialized and ready to accept instructions
@@ -144,3 +145,4 @@ avrdude: 1 bytes of lock verified
 avrdude: safemode: Fuses OK (E:FF, H:DE, L:FF)
 
 avrdude done.  Thank you.
+```
