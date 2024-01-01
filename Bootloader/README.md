@@ -47,6 +47,9 @@ please source them locally via ebay/aliexpress or an electronics store.
 
   9) Perform standard MCL OS upgrade using HexUploader or XLoader following instructions from https://github.com/jmamma/MCL/releases
 
+### Reference Image
+
+![alt text](https://github.com/jmamma/MegaCMD/blob/main/Bootloader/programmer.jpg?raw=true)
 
 ### Sample Output
 
