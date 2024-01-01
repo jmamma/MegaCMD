@@ -1,26 +1,28 @@
+## Info
+
 After several months it was discovered that in rare circumstances the MegaCMD could
 corrupt its own bootloader, if operating under low power.
 
-Symptoms:
+## Symptoms:
 
 1) MegaCMD suddenly does not boot.
 2) Unable to upgrade the MCL OS.
 
-Solution:
+## Solution:
 
 To fix this issue we need to re-flash the bootloader with the corrected fuse settings.
 
 The tools required will only cost a few dollars. The links provided are just typical examples,
 please source them locally via ebay/aliexpress or an electronics store.
 
-Tools required:
+## Tools required:
   1) USBasp USBISP 3.3 V/5V AVR Programmer
      https://core-electronics.com.au/usbasp-usbisp-3-3v-5v-avr-programmer.html?gclid=Cj0KCQiAv8SsBhC7ARIsALIkVT0Ud-RIRIi8ZF0OTpDQ5HzNdAqZZreSxNwTLxYEdv5KJ_r_GVjRA7gaAmF3EALw_wcB
 
   2) AVR Programming Cable that incorporates 10pin and 6pin ISP headers.
      https://www.sparkfun.com/products/9215
 
-Procedure:
+## Procedure:
   1) Install avrdude on your system.
 
   2) Connect the cable to the 6 pin header closest to the Atmega2560 microcontroller. (See photograph for correct cable placement and orientation)
@@ -46,7 +48,7 @@ Procedure:
   9) Perform standard MCL OS upgrade using HexUploader or XLoader following instructions from https://github.com/jmamma/MCL/releases
 
 
-*** Sample Output ***
+### Sample Output
 
 avrdude -c usbasp -p m2560 -U flash:w:optiboot_atmega2560.hex -U lfuse:w:0xFF:m -U hfuse:w:0xDE:m -U efuse:w:0xFF:m -U lock:w:0x0F:m 
 
