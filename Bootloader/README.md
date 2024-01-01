@@ -24,7 +24,7 @@ please source them locally via ebay/aliexpress or an electronics store.
 ## Procedure:
   1) Install avrdude on your system.
 
-  2) Connect the cable to the 6 pin header closest to the Atmega2560 microcontroller. (See photograph for correct cable placement and orientation)
+  2) Connect the cable to the 6 pin header closest to the Atmega2560 microcontroller. (See reference image below for correct cable placement and orientation)
 
   4) Connect the USB programmer to your computer. The LEDs should light up, and if the MegaCMD is still operational it will power on.
 
