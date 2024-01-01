@@ -11,7 +11,7 @@ These instructions do not apply to the DIY MegaCommand!!
 
 ## Solution:
 
-To fix this issue we need to re-flash the bootloader with the corrected fuse settings.
+To fix this issue we need to re-flash the Atmega2560 bootloader with the corrected fuse settings.
 
 The tools required will only cost a few dollars. The links provided are just typical examples,
 please source them locally via ebay/aliexpress or an electronics store.
