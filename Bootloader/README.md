@@ -1,7 +1,6 @@
 ## Info
 
-After several months it was discovered that in rare circumstances the MegaCMD could
-corrupt its own bootloader, if operating under low power.
+It was discovered that in rare circumstances the MegaCMD could corrupt its own bootloader, if operating under low power.
 
 ## Symptoms:
 
