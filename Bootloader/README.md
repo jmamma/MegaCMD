@@ -17,7 +17,7 @@ The tools required will only cost a few dollars. The links provided are just typ
 please source them locally via ebay/aliexpress or an electronics store.
 
 ## Tools required:
-  1) USBasp USBISP 3.3 V/5V AVR Programmer
+  1) USBasp USBISP AVR Programmer
      https://core-electronics.com.au/usbasp-usbisp-3-3v-5v-avr-programmer.html?gclid=Cj0KCQiAv8SsBhC7ARIsALIkVT0Ud-RIRIi8ZF0OTpDQ5HzNdAqZZreSxNwTLxYEdv5KJ_r_GVjRA7gaAmF3EALw_wcB
 
   2) AVR Programming Cable that incorporates 10pin and 6pin ISP headers.
