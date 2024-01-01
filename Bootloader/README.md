@@ -7,7 +7,7 @@ These instructions do not apply to the DIY MegaCommand!!
 ## Symptoms:
 
 1) MegaCMD suddenly does not boot.
-2) Unable to upgrade the MCL OS.
+2) Unable to upgrade the MCL OS, even after forcing the MegaCMD in to Serial Mode.
 
 ## Solution:
 
