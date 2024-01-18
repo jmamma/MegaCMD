@@ -54,6 +54,8 @@ please source them locally via ebay/aliexpress or an electronics store.
 
 ### Sample Output
 
+avrdude output may be different depending on version. Check that the bootloader is written 797 bytes, and that the fuse bits are written.
+
 ```
 avrdude -c usbasp -p m2560 -U flash:w:optiboot_atmega2560.hex -U lfuse:w:0xFF:m -U hfuse:w:0xDE:m -U efuse:w:0xFF:m -U lock:w:0x0F:m 
 
