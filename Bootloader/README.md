@@ -15,7 +15,7 @@ If you are having trouble upgrading MCL OS. First double check:
 
 1) You are connecting the MegaCMD directly to the computer, no USB hub.
 2) You are selecting the correct Arduino type (MegaCMD) when Uploading via HexUploader or Xloader.exe.
-3) Make sure the MegaCMD is not in Serial Mode, and not in USB MIDI.
+3) Make sure the MegaCMD is in Serial Mode, and not in USB MIDI.
    The MegaCMD can be forced in to Serial Mode by sending MC_USB_Serial.syx via Sysex.
 
 ## Solution:
