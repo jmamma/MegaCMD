@@ -42,7 +42,7 @@ please source them locally via ebay/aliexpress or an electronics store.
 
   8) We must put the MegaCMD in to serial mode for the OS upgrade.
 
-     Use SysexLibrarian or equivalent to transmit usb_serial.hex to the MegaCMD via USB-MIDI.
+     Use SysexLibrarian or equivalent to transmit MC_USB_Serial.syx to the MegaCMD via USB-MIDI.
 
      The MegaCMD will now function as a USB serial device.
 
