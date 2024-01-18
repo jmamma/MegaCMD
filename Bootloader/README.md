@@ -1,35 +1,38 @@
-After several months it was discovered that in rare circumstances the MegaCMD could
-corrupt its own bootloader, if operating under low power.
+## Advisory
 
-Symptoms:
+It was discovered that in rare circumstances the MegaCMD could corrupt its own bootloader, if operating under low power.
+
+These instructions do not apply to the DIY MegaCommand!!
+
+## Symptoms:
 
 1) MegaCMD suddenly does not boot.
-2) Unable to upgrade the MCL OS.
+2) Unable to upgrade the MCL OS, even after forcing the MegaCMD in to Serial Mode.
 
-Solution:
+## Solution:
 
-To fix this issue we need to re-flash the bootloader with the corrected fuse settings.
+To fix this issue we need to re-flash the Atmega2560 bootloader with the corrected fuse settings.
 
 The tools required will only cost a few dollars. The links provided are just typical examples,
 please source them locally via ebay/aliexpress or an electronics store.
 
-Tools required:
-  1) USBasp USBISP 3.3 V/5V AVR Programmer
+## Tools required:
+  1) USBasp USBISP AVR Programmer
      https://core-electronics.com.au/usbasp-usbisp-3-3v-5v-avr-programmer.html?gclid=Cj0KCQiAv8SsBhC7ARIsALIkVT0Ud-RIRIi8ZF0OTpDQ5HzNdAqZZreSxNwTLxYEdv5KJ_r_GVjRA7gaAmF3EALw_wcB
 
   2) AVR Programming Cable that incorporates 10pin and 6pin ISP headers.
      https://www.sparkfun.com/products/9215
 
-Procedure:
+## Procedure:
   1) Install avrdude on your system.
 
-  2) Connect the cable to the 6 pin header closest to the Atmega2560 microcontroller. (See photograph for correct cable placement and orientation)
+  2) Connect the cable to the 6 pin header nearest to the Atmega2560 microcontroller. (See reference image below for correct cable placement and orientation)
 
-  4) Connect the USB programmer to your computer. The LEDs should light up, and if the MegaCMD is still operational it will power on.
+  4) Connect the USB programmer to your computer. The programmer's LEDs should light up, and if the MegaCMD is still operational it will power on.
 
   5) Run the avdude command below to flash the bootloader, ensure the optiboot_atmega2560.hex file is in your current working directory.
 
-     avrdude -c usbasp -p m2560 -U flash:w:optiboot_atmega2560.hex -U lfuse:w:0xFF:m -U hfuse:w:0xDE:m -U efuse:w:0xFF:m -U lock:w:0x0F:m -B10
+     ```avrdude -c usbasp -p m2560 -U flash:w:optiboot_atmega2560.hex -U lfuse:w:0xFF:m -U hfuse:w:0xDE:m -U efuse:w:0xFF:m -U lock:w:0x0F:m```
 
      (See sample output below).
 
@@ -39,15 +42,21 @@ Procedure:
 
   8) We must put the MegaCMD in to serial mode for the OS upgrade.
 
-     Use SysexLibrarian or equivalent to transmit USB_SERIAL.hex to the MegaCMD via USB-MIDI.
+     Use SysexLibrarian or equivalent to transmit MC_USB_Serial.syx to the MegaCMD via USB-MIDI.
 
      The MegaCMD will now function as a USB serial device.
 
   9) Perform standard MCL OS upgrade using HexUploader or XLoader following instructions from https://github.com/jmamma/MCL/releases
 
+### Reference Image
 
-*** Sample Output ***
+![alt text](https://github.com/jmamma/MegaCMD/blob/main/Bootloader/programmer.jpg?raw=true)
 
+### Sample Output
+
+avrdude output may be different depending on version. Check that the bootloader is written 797 bytes, and that the fuse bits are written.
+
+```
 avrdude -c usbasp -p m2560 -U flash:w:optiboot_atmega2560.hex -U lfuse:w:0xFF:m -U hfuse:w:0xDE:m -U efuse:w:0xFF:m -U lock:w:0x0F:m 
 
 avrdude: AVR device initialized and ready to accept instructions
@@ -139,3 +148,4 @@ avrdude: 1 bytes of lock verified
 avrdude: safemode: Fuses OK (E:FF, H:DE, L:FF)
 
 avrdude done.  Thank you.
+```
