@@ -20,7 +20,7 @@ If you are having trouble upgrading MCL OS. First double check:
 
 ## Solution:
 
-If you still cannot upgrade, then we may need to re-flash the re-flash the Atmega2560 bootloader 
+If you still cannot upgrade, then we may need to re-flash the Atmega2560 bootloader 
 with the corrected fuse settings.
 
 The tools required will only cost a few dollars. The links provided are just typical examples,
