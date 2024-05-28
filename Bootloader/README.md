@@ -130,8 +130,8 @@ avrdude: writing efuse (1 bytes):
 Writing | ################################################## | 100% 0.00s
 
 avrdude: 1 bytes of efuse written
-avrdude: verifying efuse memory against 0xFF:
-avrdude: load data efuse data from input file 0xFF:
+avrdude: verifying efuse memory against 0xFC:
+avrdude: load data efuse data from input file 0xFC:
 avrdude: input file 0xFF contains 1 bytes
 avrdude: reading on-chip efuse data:
 
@@ -155,7 +155,7 @@ Reading | ################################################## | 100% 0.00s
 avrdude: verifying ...
 avrdude: 1 bytes of lock verified
 
-avrdude: safemode: Fuses OK (E:FF, H:DE, L:FF)
+avrdude: safemode: Fuses OK (E:FC, H:DE, L:FF)
 
 avrdude done.  Thank you.
 ```
