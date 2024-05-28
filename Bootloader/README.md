@@ -9,9 +9,19 @@ These instructions do not apply to the DIY MegaCommand!!
 1) MegaCMD suddenly does not boot.
 2) Unable to upgrade the MCL OS, even after forcing the MegaCMD in to Serial Mode.
 
+## Check the Basics...
+
+If you are having trouble upgrading MCL OS. First double check:
+
+1) You are connecting the MegaCMD directly to the computer, no USB hub.
+2) You are selecting the correct Arduino type (MegaCMD) when Uploading via HexUploader or Xloader.exe.
+3) Make sure the MegaCMD is in Serial Mode, and not in USB MIDI.
+   The MegaCMD can be forced in to Serial Mode by sending MC_USB_Serial.syx via Sysex.
+
 ## Solution:
 
-To fix this issue we need to re-flash the Atmega2560 bootloader with the corrected fuse settings.
+If you still cannot upgrade, then we may need to re-flash the Atmega2560 bootloader 
+with the corrected fuse settings.
 
 The tools required will only cost a few dollars. The links provided are just typical examples,
 please source them locally via ebay/aliexpress or an electronics store.
