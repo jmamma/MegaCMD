@@ -26,7 +26,11 @@ please source them locally via ebay/aliexpress or an electronics store.
 ## Procedure:
   1) Install avrdude on your system.
 
+<<<<<<< Updated upstream
   2) Connect the cable to the 6 pin header nearest to the Atmega2560 microcontroller. (See reference image below for correct cable placement and orientation)
+=======
+  2) Connect the cable to the 6 pin header closest to the Atmega2560 microcontroller. (See photograph programmer.jpeg for correct cable placement and orientation)
+>>>>>>> Stashed changes
 
   4) Connect the USB programmer to your computer. The programmer's LEDs should light up, and if the MegaCMD is still operational it will power on.
 
@@ -57,7 +61,7 @@ please source them locally via ebay/aliexpress or an electronics store.
 avrdude output may be different depending on version. Check that the bootloader is written 797 bytes, and that the fuse bits are written.
 
 ```
-avrdude -c usbasp -p m2560 -U flash:w:optiboot_atmega2560.hex -U lfuse:w:0xFF:m -U hfuse:w:0xDE:m -U efuse:w:0xFF:m -U lock:w:0x0F:m 
+avrdude -c usbasp -p m2560 -U flash:w:optiboot_atmega2560.hex -U lfuse:w:0xFF:m -U hfuse:w:0xDE:m -U efuse:w:0xFC:m -U lock:w:0x0F:m 
 
 avrdude: AVR device initialized and ready to accept instructions
 
