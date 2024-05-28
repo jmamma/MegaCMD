@@ -42,7 +42,7 @@ please source them locally via ebay/aliexpress or an electronics store.
 
   4) Run the avdude command below to flash the bootloader, ensure the optiboot_atmega2560.hex file is in your current working directory.
 
-     ```avrdude -c usbasp -p m2560 -U flash:w:optiboot_atmega2560.hex -U lfuse:w:0xFF:m -U hfuse:w:0xDE:m -U efuse:w:0xFC:m -U lock:w:0x0F:m```
+     ```avrdude -c usbasp -p m2560 -U flash:w:optiboot_atmega2560.hex -U lfuse:w:0xFF:m -U hfuse:w:0xDE:m -U efuse:w:0xFD:m -U lock:w:0x0F:m```
 
      (See sample output below).
 
@@ -130,8 +130,8 @@ avrdude: writing efuse (1 bytes):
 Writing | ################################################## | 100% 0.00s
 
 avrdude: 1 bytes of efuse written
-avrdude: verifying efuse memory against 0xFC:
-avrdude: load data efuse data from input file 0xFC:
+avrdude: verifying efuse memory against 0xFD:
+avrdude: load data efuse data from input file 0xFD:
 avrdude: input file 0xFF contains 1 bytes
 avrdude: reading on-chip efuse data:
 
