@@ -36,31 +36,27 @@ please source them locally via ebay/aliexpress or an electronics store.
 ## Procedure:
   1) Install avrdude on your system.
 
-<<<<<<< Updated upstream
   2) Connect the cable to the 6 pin header nearest to the Atmega2560 microcontroller. (See reference image below for correct cable placement and orientation)
-=======
-  2) Connect the cable to the 6 pin header closest to the Atmega2560 microcontroller. (See photograph programmer.jpeg for correct cable placement and orientation)
->>>>>>> Stashed changes
 
-  4) Connect the USB programmer to your computer. The programmer's LEDs should light up, and if the MegaCMD is still operational it will power on.
+  3) Connect the USB programmer to your computer. The programmer's LEDs should light up, and if the MegaCMD is still operational it will power on.
 
-  5) Run the avdude command below to flash the bootloader, ensure the optiboot_atmega2560.hex file is in your current working directory.
+  4) Run the avdude command below to flash the bootloader, ensure the optiboot_atmega2560.hex file is in your current working directory.
 
-     ```avrdude -c usbasp -p m2560 -U flash:w:optiboot_atmega2560.hex -U lfuse:w:0xFF:m -U hfuse:w:0xDE:m -U efuse:w:0xFF:m -U lock:w:0x0F:m```
+     ```avrdude -c usbasp -p m2560 -U flash:w:optiboot_atmega2560.hex -U lfuse:w:0xFF:m -U hfuse:w:0xDE:m -U efuse:w:0xFC:m -U lock:w:0x0F:m```
 
      (See sample output below).
 
-  6) Now the bootloader is reflashed, disconnect the programming cables.
+  5) Now the bootloader is reflashed, disconnect the programming cables.
 
-  7) Connect the MegaCMD to the computer via USB.
+  6) Connect the MegaCMD to the computer via USB.
 
-  8) We must put the MegaCMD in to serial mode for the OS upgrade.
+  7) We must put the MegaCMD in to serial mode for the OS upgrade.
 
      Use SysexLibrarian or equivalent to transmit MC_USB_Serial.syx to the MegaCMD via USB-MIDI.
 
      The MegaCMD will now function as a USB serial device.
 
-  9) Perform standard MCL OS upgrade using HexUploader or XLoader following instructions from https://github.com/jmamma/MCL/releases
+  8) Perform standard MCL OS upgrade using HexUploader or XLoader following instructions from https://github.com/jmamma/MCL/releases
 
 ### Reference Image
 
