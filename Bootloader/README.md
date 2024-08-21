@@ -1,6 +1,6 @@
 ## Advisory
 
-It was discovered that in rare circumstances the MegaCMD could corrupt its own bootloader, if operating under low power.
+It was discovered that in rare circumstances the MegaCMD could corrupt its own bootloader or firmware, if operating under low power.
 
 These instructions do not apply to the DIY MegaCommand!!
 
@@ -8,6 +8,7 @@ These instructions do not apply to the DIY MegaCommand!!
 
 1) MegaCMD suddenly does not boot.
 2) Unable to upgrade the MCL OS, even after forcing the MegaCMD in to Serial Mode.
+3) MCL stops functioning correctly (sign of firmware corruption)
 
 ## Check the Basics...
 
